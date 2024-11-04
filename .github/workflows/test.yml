@@ -1,0 +1,27 @@
+name: CI Pipeline
+
+on:
+  push:
+    paths:
+      - 'Dockerfile'             # Cambios en el archivo Dockerfile en la raíz
+      - 'actions/infraconfig/Dockerfile'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: InfraConfig
+        uses: ./actions/infra
+      
+      - name: Build
+        run: echo "Building"
+
+      - name: Deploy
+        run: echo "Deploying"
+
+      - name: Test
+        run: echo "Test"
