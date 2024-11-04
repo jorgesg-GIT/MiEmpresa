@@ -2,6 +2,6 @@ name: "InfraConfig"
 description: "Ejecutando tests"
 runs:
   using: "docker"
-  image: "Dockerfile"
+  image: "../../Dockerfile"
   args:
     - "Ejecutando tests"
