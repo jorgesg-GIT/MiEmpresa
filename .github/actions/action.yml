@@ -2,4 +2,4 @@ name: "InfraConfig"
 description: "Ejecutando tests"
 runs:
   using: "docker"
-  image: "./my-app/Dockerfile"
+  image: "../../my-app/Dockerfile"
