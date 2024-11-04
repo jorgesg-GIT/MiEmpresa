@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: InfraConfig
-        uses: ./actions/infra
+        uses: ./Dockerfile
       
       - name: Build
         run: echo "Building"
