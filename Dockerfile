@@ -2,4 +2,4 @@ FROM alpine:latest
 
 RUN apk update
 
-CMD echo "Ejecutando tests"
+CMD ["sh", "-c", "echo Ejecutando tests"]

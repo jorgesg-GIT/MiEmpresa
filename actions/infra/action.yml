@@ -3,5 +3,3 @@ description: "Ejecutando tests"
 runs:
   using: "docker"
   image: "../../Dockerfile"
-  args:
-    - "Ejecutando tests"
