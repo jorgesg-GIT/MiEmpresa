@@ -1,0 +1,10 @@
+name: "InfraConfig"
+description: "Ejecutando tests"
+inputs:
+  path:
+    description: 'Where is Dockerfile'
+    required: true
+    default: 'Dockerfile'
+runs:
+  using: "docker"
+  image: ${{ inputs.path }}

@@ -11,13 +11,16 @@ jobs:
         uses: actions/checkout@v2
 
       - name: InfraConfig
-        uses: ./actions/infra
+        uses: ./.github/actions/docker
+        id: container
+        with:
+          path: "./my-app/Dockerfile"
       
       - name: Build
-        run: echo "Building"
+        run: echo "${{ steps.container.outputs.build }}"
 
       - name: Deploy
-        run: echo "Deploying"
+        run: echo "${{ steps.container.outputs.deploy }}"
 
       - name: Test
-        run: echo "Test"
+        run: echo "${{ steps.container.outputs.test }}"
