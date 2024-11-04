@@ -13,8 +13,6 @@ jobs:
       - name: InfraConfig
         uses: ./.github/actions
         id: container
-        with:
-          path: "./my-app/Dockerfile"
       
       - name: Build
         run: echo "${{ steps.container.outputs.build }}"
