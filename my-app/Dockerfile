@@ -6,4 +6,4 @@ COPY entrypoint.sh /entrypoint.sh
 
 CMD ["sh", "-c", "echo Ejecutando tests"]
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh parametro1"]
