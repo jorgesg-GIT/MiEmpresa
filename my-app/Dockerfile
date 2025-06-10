@@ -9,5 +9,3 @@ RUN chmod +x ./entrypoint.sh
 CMD ["sh", "-c", "echo Ejecutando tests"]
 
 ENTRYPOINT ["/entrypoint.sh"]
-
-CMD ["parametro1"]
