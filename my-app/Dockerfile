@@ -4,6 +4,10 @@ RUN apk update
 
 COPY entrypoint.sh /entrypoint.sh
 
+RUN chmod +x ./entrypoint.sh
+
 CMD ["sh", "-c", "echo Ejecutando tests"]
 
-ENTRYPOINT ["/entrypoint.sh" "parametro1"]
+ENTRYPOINT ["/entrypoint.sh"]
+
+CMD ["parametro1"]
